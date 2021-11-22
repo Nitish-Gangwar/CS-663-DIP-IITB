@@ -30,6 +30,12 @@ figure(5);imshow(Afinal); title("A_{Final}");
 figure(6);
 subplot(1,3,1);imshow(im_noflash);title("NF");subplot(1,3,2);imshow(im_flash);title("Fl");subplot(1,3,3);imshow(Afinal); title("A_{Final}");
 %%
+%imwrite(Afinal, "PotsAmbientDenoised.jpg");
+imwrite(Afinal, "CaveAmbientDenoisedFinal.jpg");
+
+fprint("Done");
+
+
 function maskff = xshadow_flash_mask(im_nf,im_f,thr_shadow)
 sigma_blurr = 3 ;
 linA = rgb2gray(im_nf);
